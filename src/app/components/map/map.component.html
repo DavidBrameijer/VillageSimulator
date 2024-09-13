@@ -5,10 +5,10 @@
 
     <div class="grid-container">
         @for (i of getImprovements(); track $index) {
-            <div class="grid-item">{{$index}}</div>
+            <app-tile [improvement]="i" [index]="$index"/>
         }
         
-      </div>
+	</div>
 
 
 

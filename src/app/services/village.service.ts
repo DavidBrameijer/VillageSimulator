@@ -24,25 +24,25 @@ export class VillageService {
     }
   }
 
-  addImprovement(type: string, x: number, y: number): void {
+  addImprovement(type: string, index: number): void {
     let added: Improvement = { type: type, level: 1 }
-    this.improvements[y * 7 + x] = added;
+    this.improvements[index] = added;
   }
 
-  removeImprovement(x: number, y: number): void {
-    this.improvements[y * 7 + x] = {} as Improvement;
+  removeImprovement(index: number): void {
+    this.improvements[index] = {} as Improvement;
   }
 
-  upgradeImprovement(x: number, y: number): void {
+  upgradeImprovement(index: number): void {
 
-    this.improvements[y * 7 + x].level += 1;
+    this.improvements[index].level += 1;
 
   }
 
-  downgradeImprovement(x: number, y: number) {
-    let currentImprovement = this.improvements[y * 7 + x];
+  downgradeImprovement(index: number) {
+    let currentImprovement = this.improvements[index];
 
-    if (currentImprovement.level > 0) {
+    if (currentImprovement.level > 1) {
       currentImprovement.level -= 1;
     }
 

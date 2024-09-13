@@ -1,1 +1,10 @@
-<p>tile works!</p>
+<div (click)="displayPanel = !displayPanel">
+	@if (improvement.level) {
+		<p>has improvement</p>
+		<app-edit-improvement-dialog [index]="index" [class.hidden]="!displayPanel" />
+	}
+	@else {
+		<p>No Improvement</p>
+		<app-add-improvement-dialog [index]="index" [class.hidden]="!displayPanel" />
+	}
+</div>

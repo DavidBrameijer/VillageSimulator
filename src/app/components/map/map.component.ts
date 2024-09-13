@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { VillageService } from '../../services/village.service';
 import { Improvement } from '../../models/improvement';
+import { TileComponent } from "../tile/tile.component";
 
 @Component({
   selector: 'app-map',
   standalone: true,
-  imports: [],
+  imports: [TileComponent],
   templateUrl: './map.component.html',
   styleUrl: './map.component.css'
 })
