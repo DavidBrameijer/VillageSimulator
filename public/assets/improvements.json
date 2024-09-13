@@ -1,0 +1,55 @@
+[
+	{
+		"type": "House",
+		"cost": {
+			"Lumber": 5,
+			"Grain": 5,
+			"Water": 5,
+			"Sheep": 1
+		},
+		"product": {
+			"People": 5
+		}
+	},
+	{
+		"type": "Field",
+		"cost": {
+			"People": 1,
+			"Water": 2
+		},
+		"product": {
+			"Grain": 10
+		}
+	},
+	{
+		"type": "Pasture",
+		"cost": {
+			"People": 1,
+			"Grain": 2,
+			"Water": 2
+		},
+		"product": {
+			"Sheep": 5
+		}
+	},
+	{
+		"type": "Lumber Mill",
+		"cost": {
+			"People": 1
+		},
+		"product": {
+			"Lumber": 10
+		}
+	},
+	{
+		"type": "Well",
+		"cost": {
+			"People": 1,
+			"Lumber": 2
+		},
+		"product": {
+			"Water": 10
+		}
+	}
+]
+
