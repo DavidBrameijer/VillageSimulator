@@ -1,20 +1,7 @@
 <div class = "container">
-
-
-
-    <p>resources-view works!</p>
-
-
-
-
-
-
-
-
-
-
-
-
+    @for (r of getResources() | keyvalue; track $index) {
+        <app-resource-line [type]="r.key" [quantity]="r.value"></app-resource-line>
+    }
 </div>
 
 

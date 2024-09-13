@@ -13,7 +13,7 @@ export class VillageService {
   resources: Map<string, number> = new Map([
     ["Lumber", 5],
     ["Grain", 5],
-    ["water", 5],
+    ["Water", 5],
     ["Sheep", 1]
   ]);
 
