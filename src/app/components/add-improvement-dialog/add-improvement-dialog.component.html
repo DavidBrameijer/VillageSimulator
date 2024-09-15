@@ -1,2 +1,9 @@
-<button (click)="addImprovement()">Add</button>
-<input type="text" [(ngModel)]="type">
+
+<button [attr.disabled]="canImprove()"  (click)="addImprovement()">Add</button>
+<input type="text" >
+<select id="cars" name="cars" [(ngModel)]="type">
+@for (i of getPossible(); track $index) {
+        <option value="{{i.type}}">{{i.type}}</option>
+
+}
+</select>

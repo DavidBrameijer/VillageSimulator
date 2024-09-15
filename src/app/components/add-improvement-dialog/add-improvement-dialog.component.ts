@@ -5,23 +5,38 @@ import { DataService } from '../../services/data.service';
 import { ImprovementType } from '../../models/improvement-type';
 
 @Component({
-  selector: 'app-add-improvement-dialog',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './add-improvement-dialog.component.html',
-  styleUrl: './add-improvement-dialog.component.css'
+	selector: 'app-add-improvement-dialog',
+	standalone: true,
+	imports: [FormsModule],
+	templateUrl: './add-improvement-dialog.component.html',
+	styleUrl: './add-improvement-dialog.component.css'
 })
 export class AddImprovementDialogComponent {
-	constructor(private village:VillageService, private data:DataService) {}
+	constructor(private village: VillageService, private data: DataService) { }
 
 	@Input() index: number = -1;
 	type: string = "";
 
-	getPossible() : ImprovementType[] {
+	getPossible(): ImprovementType[] {
 		return this.data.improvementypes;
 	}
 
-	addImprovement() : void {
+	addImprovement(): void {
 		this.village.addImprovement(this.type, this.index);
 	}
+
+
+	canImprove(): Boolean {
+
+		let improvement = this.getPossible().find((item) => item.type === this.type)!;
+
+		for (const c of improvement.cost) {
+
+			if (this.village.resources.get(c[0])! < c[1]) {
+				return false
+			}
+		}
+		return true;
+	}
+
 }
