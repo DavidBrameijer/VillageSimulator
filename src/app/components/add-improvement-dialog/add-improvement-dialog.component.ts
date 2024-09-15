@@ -29,16 +29,20 @@ export class AddImprovementDialogComponent {
 
 	addImprovement(): void {
 		this.village.addImprovement(this.type, this.index);
+		let requirements = this.data.getImprovementByName(this.type);
+		this.village.removeResources(requirements.cost);
+		this.village.addResources(requirements.product);
 	}
 
 
 	canImprove(): Boolean {
 
-		let improvement = this.getPossible().find((item) => item.type === this.type);
-
-		if (improvement === undefined) {
+		if (this.type.length === 0) {
 			return false;
 		}
+
+		let improvement = this.data.getImprovementByName(this.type);
+
 
 		for (const type in improvement.cost) {
 			if (this.village.resources.get(type)! < (improvement.cost as any)[type]) {

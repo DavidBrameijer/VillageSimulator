@@ -29,4 +29,8 @@ export class DataService {
 		this.api.subscribe(subscriber);
 	}
   }
+
+  getImprovementByName(type:string):ImprovementType{
+	return this.improvementypes.find((item) => item.type === type)!;
+  }
 }

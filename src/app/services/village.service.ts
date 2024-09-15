@@ -14,7 +14,8 @@ export class VillageService {
     ["Lumber", 5],
     ["Grain", 5],
     ["Water", 5],
-    ["Sheep", 1]
+    ["Sheep", 1],
+    ["People", 0]
   ]);
 
   clearImprovements(): void {
@@ -45,7 +46,21 @@ export class VillageService {
     if (currentImprovement.level > 1) {
       currentImprovement.level -= 1;
     }
+  }
 
+  addResources(requirements:Map<string, number>):void{
+    for (const type in requirements) {
+			let amount = this.resources.get(type)!;
+			amount += (requirements as any)[type];
+			this.resources.set(type, amount);
+		}
+  }
 
+  removeResources(requirements:Map<string, number>):void{
+    for (const type in requirements) {
+			let amount = this.resources.get(type)!;
+			amount -= (requirements as any)[type];
+			this.resources.set(type, amount);
+		}
   }
 }
