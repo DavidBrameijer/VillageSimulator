@@ -17,6 +17,12 @@ export class AddImprovementDialogComponent {
 	@Input() index: number = -1;
 	type: string = "";
 
+	ngOnInit() : void {
+		this.data.getImprovementTypes(types => {
+			this.type = types[0].type;
+		});
+	}
+
 	getPossible(): ImprovementType[] {
 		return this.data.improvementypes;
 	}
@@ -28,12 +34,15 @@ export class AddImprovementDialogComponent {
 
 	canImprove(): Boolean {
 
-		let improvement = this.getPossible().find((item) => item.type === this.type)!;
+		let improvement = this.getPossible().find((item) => item.type === this.type);
 
-		for (const c of improvement.cost) {
+		if (improvement === undefined) {
+			return false;
+		}
 
-			if (this.village.resources.get(c[0])! < c[1]) {
-				return false
+		for (const type in improvement.cost) {
+			if (this.village.resources.get(type)! < (improvement.cost as any)[type]) {
+				return false;
 			}
 		}
 		return true;
