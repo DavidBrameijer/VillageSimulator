@@ -12,7 +12,6 @@ export class DataService {
 	this.api.subscribe(t => {
 		this.improvementypes = t;
 		this.hasData = true;
-		console.log(t);
 	});
   }
 
@@ -22,7 +21,6 @@ export class DataService {
 
   getImprovementTypes(subscriber: ((value: ImprovementType[]) => void)) : void {
 	if (this.hasData) {
-		console.log(this.improvementypes);
 		subscriber(this.improvementypes);
 	}
 	else {

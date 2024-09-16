@@ -6,40 +6,29 @@ import { SaveData } from '../models/save-data';
   providedIn: 'root'
 })
 export class SaveLoadService {
-  constructor(private village:VillageService) { }
+  constructor() {}
 
   whichGame: number = -1;
 
-  loadGame(which: number) : void {
+  loadGame(which: number) : SaveData | null {
 	let json = localStorage.getItem(`sanctuary_save_${which}`);
 	if (json === null) {
-		return;
-	}
-
-	let saveData = JSON.parse(json) as SaveData;
-	this.village.improvements = saveData.improvements;
-	this.village.resources.clear();
-	for (const key in saveData.resources) {
-		this.village.resources.set(key, (saveData.resources as any)[key] as number);
+		return null;
 	}
 	this.whichGame = which;
+	return JSON.parse(json) as SaveData;
   }
 
   hasSavedGame(which: number) : boolean {
 	return localStorage.getItem(`sanctuary_save_${which}`) != null;
   }
 
-  saveGame() : void {
-	let saveData : SaveData = {
-		resources: this.village.resources, 
-		improvements: this.village.improvements
-	};
-	localStorage.setItem(`sanctuary_save_${this.whichGame}`, JSON.stringify(saveData));
+  saveGame(saveData: SaveData) : void {
+	let json = JSON.stringify(saveData);
+	localStorage.setItem(`sanctuary_save_${this.whichGame}`, json);
   }
 
   newGame(which: number) : void {
 	this.whichGame = which;
-	this.village.clearImprovements();
-	this.saveGame();
   }
 }
