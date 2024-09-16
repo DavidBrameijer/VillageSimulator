@@ -3,11 +3,12 @@ import { Improvement } from '../../models/improvement';
 import { VillageService } from '../../services/village.service';
 import { DataService } from '../../services/data.service';
 import { concatWith } from 'rxjs';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
 	selector: 'app-edit-improvement-dialog',
 	standalone: true,
-	imports: [],
+	imports: [KeyValuePipe],
 	templateUrl: './edit-improvement-dialog.component.html',
 	styleUrl: './edit-improvement-dialog.component.css'
 })
@@ -18,6 +19,10 @@ export class EditImprovementDialogComponent {
 
 	getImprovement(): Improvement {
 		return this.village.improvements[this.index];
+	}
+
+	getRequirements(): Map<String,Number> {
+		return this.data.getImprovementByName(this.getImprovement().type).cost;
 	}
 
 	doUpgradeDowngrade(isUpgrade: boolean): void {

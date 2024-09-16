@@ -7,6 +7,20 @@
 	<button [attr.disabled] = "canUpgrade() ? null : true" (click)="doUpgradeDowngrade(true)" (click)="playUpgradeEffect()"
 	 class="btn btn-primary">+</button>
 </div>
+<div class = "">
+	
+	@for (i of getRequirements() | keyvalue; track $index) {
+
+		<ul>
+			<li> {{i.key}} : {{i.value}} </li>
+		</ul>
+		
+		
+
+	}
+
+
+</div>
 <button [attr.disabled] = "canDestroy() ? null : true" (click)="destroyImprovement()" (click)="playSoundDestroy()"
 class="btn btn-outline-danger delete">
 	Destroy
