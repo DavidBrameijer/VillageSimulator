@@ -32,3 +32,7 @@ app-tile {
 	animation: tileIn 1s ease-out;
 	animation-fill-mode: backwards;
 }
+
+audio {
+	/* display:none; */
+}

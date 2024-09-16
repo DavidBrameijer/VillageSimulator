@@ -1,6 +1,6 @@
 <p>{{getImprovement().type}} : {{getImprovement().level}}</p>
 <button [attr.disabled] = "canUpgrade() ? null : true" (click) ="doUpgradeDowngrade(true)">Upgrade</button>
 <button [attr.disabled] = "canDowngrade() ? null : true" (click)="doUpgradeDowngrade(false)">Downgrade</button>
-<button [attr.disabled] = "canDestroy() ? null : true" (click)="destroyImprovement()">Destroy</button>
+<button [attr.disabled] = "canDestroy() ? null : true" (click)="destroyImprovement()" (click)="playSoundDestroy()">Destroy</button>
 
 

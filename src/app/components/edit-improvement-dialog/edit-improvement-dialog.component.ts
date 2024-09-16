@@ -96,4 +96,17 @@ export class EditImprovementDialogComponent {
 		return true;
 
 	}
+
+	playSoundDestroy(){
+		let audio = new Audio();
+		audio.src = `assets/sounds/Sound Effects/destroy.wav`;
+		audio.load();
+		audio.volume = 0.5;
+		audio.play();
+		
+		
+		
+	}
+
+
 }

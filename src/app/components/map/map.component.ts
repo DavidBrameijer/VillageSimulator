@@ -21,4 +21,7 @@ export class MapComponent {
   getTileDelay(index: number) : number {
 	return index % 7 + Math.floor(index / 7);
   }
+ 
+   
+ 
 }
