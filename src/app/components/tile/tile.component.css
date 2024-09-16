@@ -1,0 +1,38 @@
+:host {
+	aspect-ratio: 1;
+}
+
+div {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+img {
+	image-rendering: pixelated;
+}
+
+.terrain {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	z-index: -2;
+}
+
+.building {
+	position: absolute;
+	top: -100%;
+	width: 100%;
+	z-index: -1;
+}
+
+.dialog {
+	opacity: 1;
+	pointer-events: all;
+	transition: opacity .5s;
+}
+
+.hidden {
+	opacity: 0;
+	pointer-events: none;
+}

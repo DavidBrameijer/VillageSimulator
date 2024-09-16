@@ -1,10 +1,10 @@
 <div (click)="displayPanel = !displayPanel">
+	<img src="assets/terrain/grass.png" class="terrain">
 	@if (improvement.level) {
-		<p>has improvement</p>
-		<app-edit-improvement-dialog [index]="index" [class.hidden]="!displayPanel" />
+		<img src="assets/buildings/{{improvement.type}}.png" class="building">
+		<app-edit-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
 	}
 	@else {
-		<p>No Improvement</p>
-		<app-add-improvement-dialog [index]="index" [class.hidden]="!displayPanel" />
+		<app-add-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
 	}
 </div>

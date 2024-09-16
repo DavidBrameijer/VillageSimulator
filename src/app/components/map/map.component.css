@@ -1,7 +1,4 @@
 .grid-container{
-display:grid;
-grid-template-columns: auto auto auto auto auto auto auto;
-column-gap: 40px;
-row-gap: 130px;
-
+	display:grid;
+	grid-template-columns: auto auto auto auto auto auto auto;
 }
