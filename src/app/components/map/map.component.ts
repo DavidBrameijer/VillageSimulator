@@ -18,5 +18,7 @@ export class MapComponent {
     return this.villageServices.improvements;
   }
   
-
+  getTileDelay(index: number) : number {
+	return index % 7 + Math.floor(index / 7);
+  }
 }

@@ -1,24 +1,8 @@
-<div class = "container">
-
-    <h1>Map</h1>
-
-
+<main class="container">
+	<h1>Wren's Village</h1>
     <div class="grid-container">
         @for (i of getImprovements(); track $index) {
-            <app-tile [improvement]="i" [index]="$index"/>
+            <app-tile [improvement]="i" [index]="$index" [style.animation-delay]="getTileDelay($index) * .1 + 's'"/>
         }
-        
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
+</main>

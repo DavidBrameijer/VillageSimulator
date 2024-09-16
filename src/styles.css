@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	background-image: linear-gradient(to top, #08f, #bff);
+	background-attachment: fixed;
+}
+
+@font-face {
+	font-family: "dogica";
+	src: url("./app/fonts/dogicapixel.ttf");
+}
