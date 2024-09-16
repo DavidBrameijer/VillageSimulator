@@ -1,10 +1,35 @@
 <div class="bottom">
 	<select name="improvement" [(ngModel)]="type">
-	@for (i of getPossible(); track $index) {
+		@for (i of getPossible(); track $index) {
 		<option value="{{i.type}}">{{i.type}}</option>
-	}
+		}
 	</select>
-	<button [attr.disabled]="canImprove() ? null : true" (click)="addImprovement()" (click)="playSoundEffect(type)"
-	class="btn btn-primary">Add</button>
-	
 </div>
+<div class="">
+	<table>
+		<tr>
+			<th>Cost</th>
+			<th>Benefit</th>
+		</tr>
+		<tr>
+			<th>
+				@for (i of getRequirements() | keyvalue; track $index) {
+				<ul>
+					<li> {{i.key}}: {{i.value}} </li>
+				</ul>
+				}
+			</th>
+			<th>
+				@for (b of getProduces() | keyvalue; track $index) {
+				<ul>
+					<li>{{b.key}}: {{b.value}}</li>
+				</ul>
+				}
+			</th>
+		</tr>
+	</table>
+</div>
+<button [attr.disabled]="canImprove() ? null : true" (click)="addImprovement()" (click)="playSoundEffect(type)"
+	class="btn btn-primary">Add</button>
+
+<!-- </div> -->

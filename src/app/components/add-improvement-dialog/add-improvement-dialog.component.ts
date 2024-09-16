@@ -3,11 +3,12 @@ import { VillageService } from '../../services/village.service';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../services/data.service';
 import { ImprovementType } from '../../models/improvement-type';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
 	selector: 'app-add-improvement-dialog',
 	standalone: true,
-	imports: [FormsModule],
+	imports: [FormsModule, KeyValuePipe],
 	templateUrl: './add-improvement-dialog.component.html',
 	styleUrl: './add-improvement-dialog.component.css'
 })
@@ -18,7 +19,13 @@ export class AddImprovementDialogComponent {
 	@Output() built: EventEmitter<void> = new EventEmitter();
 	type: string = "";
 
-	
+	getRequirements(): Map<String,Number> {
+		return this.data.getImprovementByName(this.type).cost;
+	}
+
+	getProduces():Map<string,number>{
+		return this.data.getImprovementByName(this.type).product;
+	}
 
 	ngOnInit() : void {
 		this.data.getImprovementTypes(types => {

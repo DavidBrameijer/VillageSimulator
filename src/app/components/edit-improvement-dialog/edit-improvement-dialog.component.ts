@@ -25,6 +25,10 @@ export class EditImprovementDialogComponent {
 		return this.data.getImprovementByName(this.getImprovement().type).cost;
 	}
 
+	getProduces():Map<string,number>{
+		return this.data.getImprovementByName(this.getImprovement().type).product;
+	}
+
 	doUpgradeDowngrade(isUpgrade: boolean): void {
 		if (isUpgrade) {
 			let requirement = this.data.getImprovementByName(this.getImprovement().type);
