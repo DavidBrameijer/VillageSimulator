@@ -11,7 +11,7 @@
 	}
 	@else {
 		<div class="dialog" [class.hidden]="!displayPanel">
-			<app-add-improvement-dialog [index]="index"/>
+			<app-add-improvement-dialog [index]="index" (built)="displayPanel = !displayPanel"/>
 		</div>
 	}
 	<button class="clicker" (click)="displayPanel = !displayPanel"></button>

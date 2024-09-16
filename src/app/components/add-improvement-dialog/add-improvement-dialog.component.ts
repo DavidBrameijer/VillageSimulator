@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { VillageService } from '../../services/village.service';
 import { FormsModule } from '@angular/forms';
 import { DataService } from '../../services/data.service';
@@ -15,6 +15,7 @@ export class AddImprovementDialogComponent {
 	constructor(private village: VillageService, private data: DataService) { }
 
 	@Input() index: number = -1;
+	@Output() built: EventEmitter<void> = new EventEmitter();
 	type: string = "";
 
 	ngOnInit() : void {
@@ -28,6 +29,7 @@ export class AddImprovementDialogComponent {
 	}
 
 	addImprovement(): void {
+		this.built.emit();
 		this.village.addImprovement(this.type, this.index);
 		let requirements = this.data.getImprovementByName(this.type);
 		this.village.removeResources(requirements.cost);

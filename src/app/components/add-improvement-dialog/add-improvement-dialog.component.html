@@ -1,10 +1,9 @@
-
-<button [attr.disabled]="canImprove() ? null : true"  (click)="addImprovement()" (click)="playSoundEffect(type)">Add</button>
-<p>{{type}}</p>
-<select id="cars" name="cars" [(ngModel)]="type">
-@for (i of getPossible(); track $index) {
-	<option value="{{i.type}}">{{i.type}}</option>
-}
-</select>
-
-
+<div class="bottom">
+	<select id="cars" name="cars" [(ngModel)]="type">
+	@for (i of getPossible(); track $index) {
+		<option value="{{i.type}}">{{i.type}}</option>
+	}
+	</select>
+	<button [attr.disabled]="canImprove() ? null : true" (click)="addImprovement()" (click)="playSoundEffect(type)"
+	class="btn btn-primary">Add</button>
+</div>
