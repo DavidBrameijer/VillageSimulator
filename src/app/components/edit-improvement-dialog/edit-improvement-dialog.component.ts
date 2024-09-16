@@ -107,5 +107,21 @@ export class EditImprovementDialogComponent {
 			
 	}
 
+	playUpgradeEffect(){
+		let audio = new Audio();
+		audio.src = "assets/sounds/Sound Effects/upgrade.wav";
+		audio.load();
+		audio.volume = 0.5;
+		audio.play();
+	}
 
+	playDowngradeEffect(){
+		let audio = new Audio();
+		audio.src = `assets/sounds/Sound Effects/downgrade.wav`;
+		audio.load();
+		audio.volume = 0.5;
+		audio.play();
+	}
+
+	
 }

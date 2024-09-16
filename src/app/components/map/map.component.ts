@@ -15,6 +15,8 @@ export class MapComponent {
 
   constructor (private villageServices:VillageService){}
 
+ 
+
   getImprovements():Improvement[]{
     return this.villageServices.improvements;
   }
@@ -22,7 +24,5 @@ export class MapComponent {
   getTileDelay(index: number) : number {
 	return index % 7 + Math.floor(index / 7);
   }
- 
   
- 
 }

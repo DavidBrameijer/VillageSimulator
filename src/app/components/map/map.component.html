@@ -3,13 +3,12 @@
      
 
 	<h1>Sanctuary</h1>
-    <!-- <audio controls autoplay loop [volume] = "0.2" class = w-100>
+     <!-- <audio controls autoplay loop [volume] = "0.2" class = w-100 id = "music">
         <source src="/assets/sounds/Music Bed/Music.wav" type="audio/wav">
-      </audio>  -->
+      </audio>   -->
     <div class="grid-container">
         @for (i of getImprovements(); track $index) {
-            <app-tile [improvement]="i" [index]="$index" [style.animation-delay]="getTileDelay($index) * .1 + 's'"/>
-            
+            <app-tile [improvement]="i" [index]="$index" [style.animation-delay]="getTileDelay($index) * .1 + 's'"/>           
         }
 	</div>
 </main>

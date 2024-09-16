@@ -18,6 +18,8 @@ export class AddImprovementDialogComponent {
 	@Output() built: EventEmitter<void> = new EventEmitter();
 	type: string = "";
 
+	
+
 	ngOnInit() : void {
 		this.data.getImprovementTypes(types => {
 			this.type = types[0].type;
