@@ -1,13 +1,18 @@
-<div (click)="displayPanel = !displayPanel">
+<div>
 	<img src="assets/terrain/grass.png" class="terrain">
 	@if (improvement.level) {
-		<img src="assets/buildings/{{improvement.type}}.png" class="building" >
-		<app-edit-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
+		<img src="assets/buildings/{{improvement.type}}.png" class="building">
+		<div class="dialog" [class.hidden]="!displayPanel">
+			<app-edit-improvement-dialog [index]="index"/>
+		</div>
 		@if (improvement.level > 1) {
-			<span class="position-absolute top-100 start-50 translate-middle badge rounded-pill bg-primary" style="font-size: 1.25em">{{improvement.level}}</span>
+			<span class="badge rounded-pill bg-primary">{{improvement.level}}</span>
 		}
 	}
 	@else {
-		<app-add-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
+		<div class="dialog" [class.hidden]="!displayPanel">
+			<app-add-improvement-dialog [index]="index"/>
+		</div>
 	}
+	<button class="clicker" (click)="displayPanel = !displayPanel"></button>
 </div>
