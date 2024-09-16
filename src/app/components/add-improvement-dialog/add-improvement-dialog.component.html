@@ -1,5 +1,5 @@
 <div class="bottom">
-	<select id="cars" name="cars" [(ngModel)]="type">
+	<select name="improvement" [(ngModel)]="type">
 	@for (i of getPossible(); track $index) {
 		<option value="{{i.type}}">{{i.type}}</option>
 	}
