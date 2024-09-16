@@ -1,2 +1,9 @@
 <app-resources-view />
 <app-map />
+<div class="hidden">
+	@for (image of buildingTypes; track $index) {
+		<img src="assets/buildings/{{image}}.png">
+		<audio src="assets/sounds/Sound Effects/{{image}}.wav"></audio>
+	}
+	<audio src="assets/sounds/Sound Effects/destroy.wav"></audio>
+</div>
