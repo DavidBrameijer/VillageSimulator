@@ -1,8 +1,11 @@
 <div (click)="displayPanel = !displayPanel">
 	<img src="assets/terrain/grass.png" class="terrain">
 	@if (improvement.level) {
-		<img src="assets/buildings/{{improvement.type}}.png" class="building">
+		<img src="assets/buildings/{{improvement.type}}.png" class="building" >
 		<app-edit-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
+		@if (improvement.level > 1) {
+			<span class="position-absolute top-100 start-50 translate-middle badge rounded-pill bg-primary" style="font-size: 1.25em">{{improvement.level}}</span>
+		}
 	}
 	@else {
 		<app-add-improvement-dialog [index]="index" [class.hidden]="!displayPanel" class="dialog"/>
