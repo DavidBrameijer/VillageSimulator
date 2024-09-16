@@ -104,8 +104,7 @@ export class EditImprovementDialogComponent {
 		audio.volume = 0.5;
 		audio.play();
 		
-		
-		
+			
 	}
 
 

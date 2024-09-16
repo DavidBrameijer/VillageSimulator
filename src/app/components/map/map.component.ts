@@ -3,6 +3,7 @@ import { VillageService } from '../../services/village.service';
 import { Improvement } from '../../models/improvement';
 import { TileComponent } from "../tile/tile.component";
 
+
 @Component({
   selector: 'app-map',
   standalone: true,
@@ -22,6 +23,6 @@ export class MapComponent {
 	return index % 7 + Math.floor(index / 7);
   }
  
-   
+  
  
 }
