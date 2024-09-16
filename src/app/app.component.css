@@ -2,6 +2,9 @@ app-resources-view {
     position: sticky;
     top: 0;
     z-index: 10;
+	background-color: #fff8;
+	backdrop-filter: blur(10px);
+	display: block;
 }
 
 .hidden {

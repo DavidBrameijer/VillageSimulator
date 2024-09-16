@@ -2,3 +2,7 @@ app-resource-line {
 	display: inline-block;
 	font-family: "dogica";
 }
+
+.container {
+	max-width: 1000px;
+}

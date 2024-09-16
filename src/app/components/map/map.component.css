@@ -3,20 +3,19 @@
 	grid-template-columns: auto auto auto auto auto auto auto;
 	position: relative;
 	z-index: 1;
+	overflow-y: visible;
 }
 
 main {
-	margin: 6em auto;
 	max-width: 800px;
+	margin-top: 1em;
 }
 
 h1 {
 	font-weight: bolder;
 	font-size: 6em;
-	margin-bottom: -.175em;
 	color: #fff;
 	text-align: center;
-	padding-bottom: 1em;
 }
 
 @keyframes tileIn {
@@ -37,6 +36,5 @@ app-tile {
 
 audio{
 	  display:none;
-	 
 }
 	
