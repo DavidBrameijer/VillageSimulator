@@ -1,4 +1,15 @@
 <app-resources-view />
+<button class="btn-mute btn btn-outline-primary" (click)="musicMuted = !musicMuted">
+	@if (musicMuted) {
+		&#xF60C;
+	} @else {
+		&#xF610;
+	}
+</button>
+<audio autoplay loop [volume] = "0.2" style="display: none;" [muted]="musicMuted">
+	<source src="/assets/sounds/Music Bed/Music.wav" type="audio/wav">
+</audio>
+<h1>{{title}}</h1>
 @if (isGameLoaded()) {
 	<app-map />
 } @else {
@@ -12,4 +23,6 @@
 	<audio src="assets/sounds/Sound Effects/destroy.wav"></audio>
 	<audio src="assets/sounds/Sound Effects/upgrade.wav"></audio>
 	<audio src="assets/sounds/Sound Effects/downgrade.wav"></audio>
+	<img src="assets/terrain/grass.png">
 </div>
+<footer></footer>

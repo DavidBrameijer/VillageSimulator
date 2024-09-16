@@ -11,13 +11,6 @@ main {
 	margin-top: 1em;
 }
 
-h1 {
-	font-weight: bolder;
-	font-size: 6em;
-	color: #fff;
-	text-align: center;
-}
-
 @keyframes tileIn {
 	from {
 		opacity: 0;

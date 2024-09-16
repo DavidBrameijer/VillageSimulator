@@ -18,6 +18,7 @@ export class AppComponent {
 
   title = 'Sanctuary';
   buildingTypes: string[] = [];
+  musicMuted: boolean = false;
 
   ngOnInit() : void {
 	this.data.getImprovementTypes(types => {

@@ -15,3 +15,23 @@ app-resources-view {
 	opacity: 0;
 	pointer-events: none;
 }
+
+h1 {
+	font-weight: bolder;
+	font-size: 6em;
+	color: #fff;
+	text-align: center;
+}
+
+.btn-mute {
+	font-family: "bootstrap-icons";
+	position: fixed;
+	top: .5rem;
+	right: .5rem;
+	z-index: 15;
+	font-size: 1.5em;
+}
+
+footer {
+	margin-top: 6em;
+}
