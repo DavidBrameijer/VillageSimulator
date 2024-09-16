@@ -1,0 +1,8 @@
+.bottom {
+	display: flex;
+}
+
+.bottom select{
+	flex-grow: 1;
+	margin-right: .5em;
+}
