@@ -55,7 +55,7 @@ After the server starts, open a browser and go to http://localhost:4200/. You ca
 **Save & Load:** Use the Title Page to select or start a new game, allowing you to manage multiple saves and load progress.
 
 
-**Attributions: **
+Attributions:
 -----
 
 Chopping Wood: Chopping Wood_02.wav by CGEffex -- https://freesound.org/s/158972/ -- License: Attribution 4.0
