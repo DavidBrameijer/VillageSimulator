@@ -36,3 +36,12 @@ h1 {
 footer {
 	margin-top: 6em;
 }
+
+.bi {
+	font-family: "bootstrap-icons";
+	position: fixed;
+	top: .5rem;
+	right: 4rem;
+	z-index: 15;
+	font-size: 1.5em;
+}
