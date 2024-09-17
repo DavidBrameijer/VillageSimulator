@@ -1,4 +1,4 @@
-**Village Simmulator- Angular Project**
+**Village Simmulator - Angular Project**
 -----
 Sanctuary is an Angular application that allows users to manage improvements and resources in a village.
 The user can add, upgrade, downgrade, or remove improvements, and these actions are limited based on the available resources.
@@ -56,6 +56,7 @@ After the server starts, open a browser and go to http://localhost:4200/. You ca
 
 
 **Attributions: **
+-----
 
 Chopping Wood: Chopping Wood_02.wav by CGEffex -- https://freesound.org/s/158972/ -- License: Attribution 4.0
 
