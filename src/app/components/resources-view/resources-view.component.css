@@ -1,8 +1,11 @@
-app-resource-line {
-	display: inline-block;
-	font-family: "dogica";
-}
-
 .container {
 	max-width: 1000px;
+	font-family: "dogica";
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+app-resource-line {
+	flex-grow: 1;
 }

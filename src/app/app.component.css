@@ -27,10 +27,10 @@ h1 {
 .btn-mute {
 	font-family: "bootstrap-icons";
 	position: fixed;
-	top: .5rem;
-	right: .5rem;
+	top: .25rem;
+	left: .25rem;
 	z-index: 15;
-	font-size: 1.5em;
+	padding: .175rem .35rem;
 }
 
 footer {

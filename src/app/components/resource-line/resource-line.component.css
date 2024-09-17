@@ -1,0 +1,13 @@
+:host {
+	display: flex;
+	padding: .5em 1em;
+	justify-content: center;
+}
+p {
+	text-wrap: nowrap;
+	margin:0px;
+}
+img {
+	image-rendering: pixelated;
+	height: 100%;
+}
