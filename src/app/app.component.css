@@ -18,7 +18,7 @@ app-resources-view {
 
 h1 {
 	font-weight: bolder;
-	font-size: 6em;
+	font-size: 3em;
 	color: #fff;
 	text-align: center;
 	margin-top: 9rem;
@@ -40,8 +40,19 @@ footer {
 .bi {
 	font-family: "bootstrap-icons";
 	position: fixed;
-	top: .25rem;
-	left: 2.25rem;
+	top: 2.25rem;
+	left: .25rem;
 	z-index: 15;
 	padding: .175rem .35rem;
+}
+
+@media (min-width: 1070px) {
+	.bi {
+		top: .25rem;
+		left: 2.25rem;
+	}
+
+	h1 {
+		font-size: 6em;
+	}
 }
