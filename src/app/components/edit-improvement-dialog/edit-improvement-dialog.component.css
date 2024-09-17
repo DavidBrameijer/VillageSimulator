@@ -22,3 +22,20 @@
 	display: block;
 	width: 100%;
 }
+
+.resources {
+	display: flex;
+	align-items: start;
+}
+
+.resources table {
+	width: 7em;
+}
+
+thead {
+	border-bottom: 1px solid #0003;
+}
+
+h5 {
+	margin-bottom: -.75rem;
+}

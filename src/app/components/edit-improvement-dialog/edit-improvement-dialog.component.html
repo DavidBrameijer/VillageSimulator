@@ -1,35 +1,46 @@
 <h5>{{getImprovement().type}}</h5>
 <hr>
+<div class="resources">
+	<table>
+		<thead>
+			<tr>
+				<th>Cost</th>
+				<th class="small-col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (i of getRequirements() | keyvalue; track $index) {
+				<tr>
+					<td>{{i.key}}</td>
+					<td>{{i.value}}</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<table>
+		<thead>
+			<tr>
+				<th>Product</th>
+				<th class="small-col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (i of getProduces() | keyvalue; track $index) {
+				<tr>
+					<td>{{i.key}}</td>
+					<td>{{i.value}}</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+<hr>
 <div class="level">
 	<span>Level {{getImprovement().level}}</span>
 	<button [attr.disabled] = "canDowngrade() ? null : true" (click)="doUpgradeDowngrade(false)" (click)="playDowngradeEffect()"
 	class="btn btn-primary">-</button>
 	<button [attr.disabled] = "canUpgrade() ? null : true" (click)="doUpgradeDowngrade(true)" (click)="playUpgradeEffect()"
 	 class="btn btn-primary">+</button>
-</div>
-<div class = "">
-	<table>
-		<tr>
-			<th>Cost</th>
-			<th>Benefit</th>
-		</tr>
-		<tr>
-			<th>
-				@for (i of getRequirements() | keyvalue; track $index) {
-					<ul>
-						<li> {{i.key}}: {{i.value}} </li>
-					</ul>
-				}
-			</th>
-			<th>
-				@for (b of getProduces() | keyvalue; track $index) {
-					<ul>
-						<li>{{b.key}}: {{b.value}}</li>
-					</ul>
-				}
-			</th>
-		</tr>
-	</table>
 </div>
 <button [attr.disabled] = "canDestroy() ? null : true" (click)="destroyImprovement()" (click)="playSoundDestroy()"
 class="btn btn-outline-danger delete">
