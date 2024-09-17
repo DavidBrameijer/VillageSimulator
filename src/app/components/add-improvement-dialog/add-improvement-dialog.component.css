@@ -6,3 +6,16 @@
 	flex-grow: 1;
 	margin-right: .5em;
 }
+
+.resources {
+	display: flex;
+	align-items: start;
+}
+
+.resources table {
+	width: 7em;
+}
+
+thead {
+	border-bottom: 1px solid #0003;
+}

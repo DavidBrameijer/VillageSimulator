@@ -1,35 +1,45 @@
 <div class="bottom">
 	<select name="improvement" [(ngModel)]="type">
 		@for (i of getPossible(); track $index) {
-		<option value="{{i.type}}">{{i.type}}</option>
+			<option value="{{i.type}}">{{i.type}}</option>
 		}
 	</select>
+	<button [attr.disabled]="canImprove() ? null : true" (click)="addImprovement()" (click)="playSoundEffect(type)"
+		class="btn btn-primary">Add</button>
 </div>
-<div class="">
+<div class="resources">
 	<table>
-		<tr>
-			<th>Cost</th>
-			<th>Benefit</th>
-		</tr>
-		<tr>
-			<th>
-				@for (i of getRequirements() | keyvalue; track $index) {
-				<ul>
-					<li> {{i.key}}: {{i.value}} </li>
-				</ul>
-				}
-			</th>
-			<th>
-				@for (b of getProduces() | keyvalue; track $index) {
-				<ul>
-					<li>{{b.key}}: {{b.value}}</li>
-				</ul>
-				}
-			</th>
-		</tr>
+		<thead>
+			<tr>
+				<th>Cost</th>
+				<th class="small-col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (i of getRequirements() | keyvalue; track $index) {
+				<tr>
+					<td>{{i.key}}</td>
+					<td>{{i.value}}</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+	<table>
+		<thead>
+			<tr>
+				<th>Product</th>
+				<th class="small-col"></th>
+			</tr>
+		</thead>
+		<tbody>
+			@for (i of getProduces() | keyvalue; track $index) {
+				<tr>
+					<td>{{i.key}}</td>
+					<td>{{i.value}}</td>
+				</tr>
+			}
+		</tbody>
 	</table>
 </div>
-<button [attr.disabled]="canImprove() ? null : true" (click)="addImprovement()" (click)="playSoundEffect(type)"
-	class="btn btn-primary">Add</button>
 
 <!-- </div> -->
