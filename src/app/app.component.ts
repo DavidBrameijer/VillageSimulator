@@ -33,4 +33,13 @@ export class AppComponent {
   backToHome():number{
     return this.saveLoad.whichGame = -1;
   }
+
+  isHome():boolean{
+    if(this.saveLoad.whichGame === -1){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 }

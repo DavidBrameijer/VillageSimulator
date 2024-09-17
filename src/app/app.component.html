@@ -1,4 +1,6 @@
-<app-resources-view />
+@if (isHome() === false) {
+	<app-resources-view />
+}
 <button class="btn-mute btn btn-pulse btn-outline-primary" (click)="musicMuted = !musicMuted">
 	@if (musicMuted) {
 		&#xF60C;
