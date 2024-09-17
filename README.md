@@ -1,27 +1,61 @@
-# VillageSim
+**Village Builder - Angular Project**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+The Village Builder is an Angular application that allows users to manage improvements and resources in a village.
+The user can add, upgrade, downgrade, or remove improvements, and these actions are limited based on the available resources.
 
-## Development server
+**Key Features:**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**Dynamic Map Grid:** Displays improvements placed on a grid, with options to add new ones or manage existing ones.
 
-## Code scaffolding
+**Resource Management:** Tracks and displays the resources available, which impact the ability to add or upgrade improvements.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Responsive Design:** The app is built with mobile-first responsive styling and adjusts seamlessly across devices.
 
-## Build
+**Interactive UI:** Animations are implemented for a smooth, engaging user experience.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Game Persistence:** Save and load your village's progress across sessions.
 
-## Running unit tests
+**Title Page:** Select from available save files to load previous game data or start a new game.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Art and Music:** Custom sprites and background music enhance the game's aesthetic experience.
 
-## Running end-to-end tests
+Installation
+To run this project locally, follow these steps:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+**Clone the repository:**
 
-## Further help
+bash: _git clone https://github.com/your-username/village-builder.git_
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Navigate to the project directory:**
+
+bash: _cd VillageSimulator_
+
+**Install dependencies:**
+
+bash: _npm install_
+
+**Run the development server:**
+
+bash: ng serve_
+
+**Usage**
+After the server starts, open a browser and go to http://localhost:4200/. You can interact with the village grid, add improvements, and manage resources.
+
+**Key Actions:**
+
+**Add Improvement:** Click on an empty tile to bring up a form to select and add a new improvement.
+
+**Edit Improvement:** Click on an existing improvement to upgrade, downgrade, or remove it.
+
+**Resource Management:** View available resources and how each action affects them.
+
+**Save & Load:** Use the Title Page to select or start a new game, allowing you to manage multiple saves and load progress.
+
+
+**Attributions: **
+
+Chopping Wood: Chopping Wood_02.wav by CGEffex -- https://freesound.org/s/158972/ -- License: Attribution 4.0
+
+Hammer: hammer.wav by KirstenBrooks3232 -- https://freesound.org/s/594390/ -- License: Attribution NonCommercial 3.0
+
+Music: 8 Bit Water Stage Loop.wav by Mrthenoronha -- https://freesound.org/s/523725/ -- License: Attribution NonCommercial 4.0
