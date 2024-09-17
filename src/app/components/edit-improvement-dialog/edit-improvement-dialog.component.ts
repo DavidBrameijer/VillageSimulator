@@ -132,5 +132,7 @@ export class EditImprovementDialogComponent {
 		audio.play();
 	}
 
-	
+	hasResourceAmount(name: String, amount: Number) : boolean {
+		return this.village.resources.get(name.toString())! >= amount.valueOf();
+	}
 }

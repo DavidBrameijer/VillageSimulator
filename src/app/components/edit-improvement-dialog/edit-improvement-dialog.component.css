@@ -39,3 +39,7 @@ thead {
 h5 {
 	margin-bottom: -.75rem;
 }
+
+.not-enough {
+	color: orange;
+}

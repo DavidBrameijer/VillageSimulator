@@ -19,3 +19,7 @@
 thead {
 	border-bottom: 1px solid #0003;
 }
+
+.not-enough {
+	color: orange;
+}

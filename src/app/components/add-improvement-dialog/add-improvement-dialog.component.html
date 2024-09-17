@@ -17,7 +17,7 @@
 		</thead>
 		<tbody>
 			@for (i of getRequirements() | keyvalue; track $index) {
-				<tr>
+				<tr [class.not-enough]="!hasResourceAmount(i.key, i.value)">
 					<td>{{i.key}}</td>
 					<td>{{i.value}}</td>
 				</tr>
