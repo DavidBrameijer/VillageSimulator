@@ -1,7 +1,9 @@
-**Village Simulator - Angular Project**
+![favicon](https://github.com/user-attachments/assets/1e227ff1-def5-4f14-b04b-12a273491d8f) **Village Simulator - Angular Project** 
 -----
-Village Simulator is an Angular application that allows users to manage improvements and resources in a village.
-The user can add, upgrade, downgrade, or remove improvements, and these actions are limited based on the available resources.
+
+
+![village sim (1)](https://github.com/user-attachments/assets/e80238d1-7ff2-466e-bd8d-4b0853be36bf)
+
 
 **Key Features:**
 -----
