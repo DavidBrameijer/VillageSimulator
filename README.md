@@ -26,7 +26,7 @@ _To run this project locally, follow these steps:_
 
 **Clone the repository:**
 
-bash: _git clone [https://github.com/your-username/village-builder.git_](https://github.com/DavidBrameijer/VillageSimulator.git)
+bash: _git clone https://github.com/DavidBrameijer/VillageSimulator.git
 
 **Navigate to the project directory:**
 
