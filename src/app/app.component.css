@@ -40,8 +40,8 @@ footer {
 .bi {
 	font-family: "bootstrap-icons";
 	position: fixed;
-	top: .5rem;
-	right: 4rem;
+	top: .25rem;
+	left: 2.25rem;
 	z-index: 15;
-	font-size: 1.5em;
+	padding: .175rem .35rem;
 }
