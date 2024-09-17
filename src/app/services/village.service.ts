@@ -12,13 +12,7 @@ export class VillageService {
   }
 
   improvements: Improvement[] = [];
-  resources: Map<string, number> = new Map([
-    ["Lumber", 5],
-    ["Grain", 5],
-    ["Water", 5],
-    ["Sheep", 1],
-    ["People", 0]
-  ]);
+  resources: Map<string, number> = this.getDefaultResources();
 
   saveGame() : void {
 	let saveData : SaveData = {
@@ -34,21 +28,27 @@ export class VillageService {
 		return;
 	}	
 	this.improvements = loadData.improvements;
-	this.resources.clear();
+	this.resources = this.getDefaultResources();
 	for (const key in loadData.resources) {
 		this.resources.set(key, (loadData.resources as any)[key] as number);
 	}
   }
 
-  newGame(index: number) : void {
-	this.saveLoad.newGame(index);
-	this.resources = new Map([
+  getDefaultResources() : Map<string, number> {
+	return new Map([
 		["Lumber", 5],
 		["Grain", 5],
 		["Water", 5],
 		["Sheep", 1],
-		["People", 0]
+		["People", 0],
+		["Stone", 0],
+		["Gold", 0]
 	]);
+  }
+
+  newGame(index: number) : void {
+	this.saveLoad.newGame(index);
+	this.resources = this.getDefaultResources();
 	this.clearImprovements();
 	this.saveGame();
   }
@@ -89,6 +89,8 @@ export class VillageService {
   addResources(requirements:Map<string, number>):void{
     for (const type in requirements) {
 			let amount = this.resources.get(type)!;
+			console.log(amount);
+			console.log(type);
 			amount += (requirements as any)[type];
 			this.resources.set(type, amount);
 	}

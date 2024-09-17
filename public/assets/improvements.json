@@ -50,6 +50,41 @@
 		"product": {
 			"Water": 10
 		}
+	},
+	{
+		"type": "Windmill",
+		"cost": {
+			"People": 1,
+			"Stone": 5
+		},
+		"product": {
+			"Water": 7,
+			"Grain": 7
+		}
+	},
+	{
+		"type": "Mine",
+		"cost": {
+			"People": 1,
+			"Water": 2,
+			"Lumber": 2
+		},
+		"product": {
+			"Stone": 5,
+			"Gold": 5
+		}
+	},
+	{
+		"type": "Market",
+		"cost": {
+			"Gold": 10
+		},
+		"product": {
+			"Water": 5,
+			"Sheep": 5,
+			"Lumber": 5,
+			"Grain": 5
+		}
 	}
 ]
 
