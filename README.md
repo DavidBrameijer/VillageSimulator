@@ -1,10 +1,10 @@
-**Sanctuary- Angular Project**
-
+**Village Simmulator- Angular Project**
+-----
 Sanctuary is an Angular application that allows users to manage improvements and resources in a village.
 The user can add, upgrade, downgrade, or remove improvements, and these actions are limited based on the available resources.
 
 **Key Features:**
-
+-----
 **Dynamic Map Grid:** Displays improvements placed on a grid, with options to add new ones or manage existing ones.
 
 **Resource Management:** Tracks and displays the resources available, which impact the ability to add or upgrade improvements.
@@ -19,8 +19,10 @@ The user can add, upgrade, downgrade, or remove improvements, and these actions 
 
 **Art and Music:** Custom sprites and background music enhance the game's aesthetic experience.
 
-Installation
-To run this project locally, follow these steps:
+**Installation**
+-----
+
+_To run this project locally, follow these steps:_
 
 **Clone the repository:**
 
@@ -36,12 +38,13 @@ bash: _npm install_
 
 **Run the development server:**
 
-bash: ng serve_
+bash: _ng serve__
 
 **Usage**
 After the server starts, open a browser and go to http://localhost:4200/. You can interact with the village grid, add improvements, and manage resources.
 
 **Key Actions:**
+-----
 
 **Add Improvement:** Click on an empty tile to bring up a form to select and add a new improvement.
 
