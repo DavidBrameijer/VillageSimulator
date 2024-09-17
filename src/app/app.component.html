@@ -1,12 +1,12 @@
 <app-resources-view />
-<button class="btn-mute btn btn-outline-primary" (click)="musicMuted = !musicMuted">
+<button class="btn-mute btn btn-pulse btn-outline-primary" (click)="musicMuted = !musicMuted">
 	@if (musicMuted) {
 		&#xF60C;
 	} @else {
 		&#xF610;
 	}
 </button>
-<button (click)="backToHome()" class="bi bi-arrow-90deg-left btn btn-outline-primary"></button>
+<button (click)="backToHome()" class="bi bi-arrow-90deg-left btn btn-outline-primary btn-pulse"></button>
 <audio autoplay loop [volume] = "0.2" style="display: none;" [muted]="musicMuted">
 	<source src="/assets/sounds/Music Bed/Music.wav" type="audio/wav">
 </audio>
