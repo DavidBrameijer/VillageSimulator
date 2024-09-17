@@ -1,6 +1,6 @@
-**Village Builder - Angular Project**
+**Sanctuary- Angular Project**
 
-The Village Builder is an Angular application that allows users to manage improvements and resources in a village.
+Sanctuary is an Angular application that allows users to manage improvements and resources in a village.
 The user can add, upgrade, downgrade, or remove improvements, and these actions are limited based on the available resources.
 
 **Key Features:**
