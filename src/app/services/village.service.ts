@@ -42,6 +42,13 @@ export class VillageService {
 
   newGame(index: number) : void {
 	this.saveLoad.newGame(index);
+	this.resources = new Map([
+		["Lumber", 5],
+		["Grain", 5],
+		["Water", 5],
+		["Sheep", 1],
+		["People", 0]
+	]);
 	this.clearImprovements();
 	this.saveGame();
   }
