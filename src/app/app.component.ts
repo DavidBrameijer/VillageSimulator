@@ -29,4 +29,8 @@ export class AppComponent {
   isGameLoaded(): boolean {
 	return this.saveLoad.whichGame > 0
   }
+
+  backToHome():number{
+    return this.saveLoad.whichGame = -1;
+  }
 }
